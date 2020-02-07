@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+  int i;
+  int j;
+  int k;
+  int b = 49;
+  int c = 50;
+  
+  for(i = 48; i <= 57; i++)
+    {
+      pri
+      for(j = b; j <= 57; j++)
+	{
+	  for(k = c; k <= 57; k++)
+	    {
+	      putchar(i);
+	      putchar(j);
+	      putchar(k);
+	      if(i != 55 || j != 56 || k != 57)
+		{
+		  putchar(',');
+		  putchar(' ');
+		}
+	    }
+	  c++;
+	}
+      b++;
+    }
+  
+  putchar('\n');
+  
+  return (0);
+}

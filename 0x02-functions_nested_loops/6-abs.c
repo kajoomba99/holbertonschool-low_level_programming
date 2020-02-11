@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
+ * _abs - check the code for Holberton School students.
+ * @n: is a number:
  * Return: Always 0.
  */
 int _abs(int n)

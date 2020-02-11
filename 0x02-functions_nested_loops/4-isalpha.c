@@ -2,8 +2,8 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
+ * _isalpha - this function check if a parameter is a letter..
+ * @c: is the letter that will be checked
  * Return: Always 0.
  */
 int _isalpha(int c)

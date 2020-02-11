@@ -1,13 +1,14 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
+ * print_alphabet - Print the alphabet on standard output
  *
  * Return: Always 0.
  */
-void print_alphabet()
+void print_alphabet(void)
 {
 	char i;
+
 	for (i = 'a'; i <= 'z'; i++)
 	{
 		_putchar(i);

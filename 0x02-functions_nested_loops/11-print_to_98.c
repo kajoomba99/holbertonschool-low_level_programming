@@ -28,6 +28,7 @@ void print_to_98(int n)
 			init++;
 		}
 		printf(",");
+		printf(" ");
 	}
 
 	printf("\n");

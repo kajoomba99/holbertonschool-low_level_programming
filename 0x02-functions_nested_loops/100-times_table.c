@@ -19,14 +19,18 @@ void print_times_table(int n)
 				if (init >= 0 && init <= 9)
 				{
 					_putchar(init + '0');
+
 				} else if (init >= 10 && init <= 99)
 				{
+
 					fd = init / 10;
 					sd = init % 10;
 					_putchar(fd + '0');
 					_putchar(sd + '0');
+
 				} else if (init >= 100 && init <= 999)
 				{
+
 					fd = init / 100;
 					rsd = init / 10;
 					sd = rsd % 10;
@@ -34,7 +38,9 @@ void print_times_table(int n)
 					_putchar(fd + '0');
 					_putchar(sd + '0');
 					_putchar(td + '0');
+
 				}
+
 				init += i;
 
 				if (j != n)

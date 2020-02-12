@@ -1,7 +1,10 @@
 #include <stdio.h>
+
 /**
-* print_multiples - print the multiples of 3 and 5 from 0 to 1024 (excluded).
-*/
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
 
 int main(void)
 {
@@ -9,10 +12,12 @@ int main(void)
 
 	for (i = 0; i < 1024; i++)
 	{
-		if ( (i % 5) == 0 || (i % 3) == 0)
+		if (i % 5 == 0 || i % 3 == 0)
 		{
 			sum += i;
 		}
 	}
-	printf("%d\n",sum);
+	printf("%d\n", sum);
+
+	return (0);
 }

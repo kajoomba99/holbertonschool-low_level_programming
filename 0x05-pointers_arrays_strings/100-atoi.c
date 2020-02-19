@@ -1,4 +1,9 @@
 #include "holberton.h"
+/**
+ * _atoi - extract numbers from string.
+ * @s: string.
+ * Return: the numbers of the string.
+ */
 
 int _atoi(char *s)
 {
@@ -13,7 +18,7 @@ int _atoi(char *s)
 		} else if (s[i] >= 48 && s[i] <= 57)
 		{
 			num = num * 10 + (s[i] - 48);
-		}else if (num > 0)
+		} else if (num > 0)
 		{
 			break;
 		}

@@ -5,7 +5,7 @@
  * @s: a string.
  */
 
-void rev_string(char *s)
+void rev_string(char s[])
 {
 	int l = 0, i, e, b = 0;
 	char r[1000];

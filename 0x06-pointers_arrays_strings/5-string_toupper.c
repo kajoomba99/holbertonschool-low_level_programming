@@ -6,12 +6,12 @@
  */
 char *string_toupper(char *s)
 {
-	int l, i;
+	int l;
 
 	while (s[l] != '\0')
 	{
-		if (s[i] >= 'a' && s[i] <= 'z')
-			s[i] = (s[i] - 32);
+		if (s[l] >= 'a' && s[l] <= 'z')
+			s[l] = (s[l] - 32);
 		l++;
 	}
 	return (s);

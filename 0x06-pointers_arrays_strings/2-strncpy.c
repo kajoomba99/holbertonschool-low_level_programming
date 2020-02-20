@@ -8,7 +8,13 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i = 0;
+	int i = 0, ld = 0;
+
+	while (dest[ld])
+		ld++;
+
+	if (n > (ld - 1))
+		n = ld;
 
 	while (i < n)
 	{

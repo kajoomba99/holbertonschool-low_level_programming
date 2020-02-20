@@ -1,26 +1,26 @@
+#include <stdio.h>
 #include "holberton.h"
+
 /**
- * _strncpy - asdasdasd.
- * @dest: asdad.
- * @src: asdasd.
- * @n: sadadwee.
- * Return: asdasdsad.
+ * _strncpy - function that copies a string.
+ * @n: size of character to contatenate
+ * @dest: s1
+ * @src: s2
+ * Return: Always 0.
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i = 0, ld = 0;
+	int i = 0;
 
-	while (dest[ld])
-		ld++;
+		for (i = 0; i < n && src[i] != '\0'; i++)
+			dest[i] = src[i];
 
-	if (n > (ld - 1))
-		n = ld;
+		printf("i : %d", );
 
-	while (i < n)
-	{
-		dest[i] = src[i];
-		i++;
-	}
+		for ( ; i < n; i++)
+		{
+			dest[i] = '\0';
+		}
 
 	return (dest);
 }

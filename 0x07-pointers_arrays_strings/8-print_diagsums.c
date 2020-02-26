@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include "holberton.h"
-
+/**
+ * print_diagsums - 
+ * @a: array of int.
+ * @size: the size of the array a.
+ */
 void print_diagsums(int *a, int size)
 {
 	int sumd1 = 0, d1;

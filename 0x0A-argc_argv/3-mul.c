@@ -11,7 +11,7 @@ int main(int argc __attribute__((unused)),
 {
 	int rv = 0;
 
-	if (argc > 1)
+	if (argc > 2)
 	{
 		printf("%i\n", atoi(argv[1]) * atoi(argv[2]));
 	} else

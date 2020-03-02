@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <string.h>
 /**
  * is_digit - verify if a parameter is a digit
  * @c: parametes
@@ -9,16 +10,20 @@
 int is_digit(char *c)
 {
 	int rv = 1, i;
-
-	if (c[0] == '-')
-		i = 1;
-	else
-		i = 0;
-
-	for (; c[i] != '\0'; i++)
+	if (strlen(c) > 1)
 	{
-		if (!isdigit(c[i]))
-			rv = 0;
+		if (c[0] == '-')
+			i = 1;
+		else
+			i = 0;
+		for (; c[i] != '\0'; i++)
+		{
+			if (!isdigit(c[i]))
+				rv = 0;
+		}
+	} else 
+	{
+		rv = 0;
 	}
 	return (rv);
 }

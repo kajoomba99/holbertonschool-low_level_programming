@@ -10,6 +10,7 @@
 int is_digit(char *c)
 {
 	int rv = 1, i;
+
 	if (strlen(c) > 1)
 	{
 		if (c[0] == '-')
@@ -21,7 +22,7 @@ int is_digit(char *c)
 			if (!isdigit(c[i]))
 				rv = 0;
 		}
-	} else 
+	} else
 	{
 		rv = 0;
 	}

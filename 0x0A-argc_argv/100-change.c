@@ -10,7 +10,12 @@ int is_digit(char *c)
 {
 	int rv = 1, i;
 
-	for (i = 0; c[i] != '\0'; i++)
+	if (c[0] == '-')
+		i = 1;
+	else
+		i = 0;
+
+	for (; c[i] != '\0'; i++)
 	{
 		if (!isdigit(c[i]))
 			rv = 0;
@@ -60,15 +65,16 @@ int main(int argc __attribute__((unused)),
 	{
 		if (is_digit(argv[1]))
 		{
-		c = atoi(argv[1]);
-		if (c > 0)
-		{
-			printf("%i\n", coins_number(c));
-		}
-		else
-		{
-			printf("0\n");
-		}
+			c = atoi(argv[1]);
+
+			if (c > 0)
+			{
+				printf("%i\n", coins_number(c));
+			}
+			else
+			{
+				printf("0\n");
+			}
 		}
 		else
 		{

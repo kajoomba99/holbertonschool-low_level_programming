@@ -48,11 +48,11 @@ char *str_concat(char *s1, char *s2)
 	}
 
 	while (s2[j])
-        {
-                p[i] = s2[j];
+	{
+		p[i] = s2[j];
 		j++;
-                i++;
-        }
+		i++;
+	}
 
 	p[i] = '\0';
 

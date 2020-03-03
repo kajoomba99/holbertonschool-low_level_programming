@@ -26,13 +26,15 @@ char *str_concat(char *s1, char *s2)
 {
 	int lenght, i = 0, j = 0;
 
-	char *p;
+	char *p, *emp;
+
+	emp = "";
 
 	if (s1 == NULL)
-		s1 = "";
+		s1 = emp;
 
 	if (s2 == NULL)
-		s2 = "";
+		s2 = emp;
 
 	lenght = get_size(s1) + get_size(s2);
 

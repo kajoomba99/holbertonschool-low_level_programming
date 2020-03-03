@@ -29,10 +29,14 @@ char *str_concat(char *s1, char *s2)
 	char *p, *empty = "";
 
 	if (s1 == NULL)
-		s1 = empty;
+		s1 = malloc(sizeof(char) + 1);
+                *s1 = '\0';
 
 	if (s2 == NULL)
-		s2 = empty;
+	{
+		s2 = malloc(sizeof(char) + 1);
+		*s2 = '\0';
+	}
 
 	lenght = get_size(s1) + get_size(s2);
 

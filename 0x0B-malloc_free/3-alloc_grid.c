@@ -1,5 +1,10 @@
 #include <stdlib.h>
-
+/**
+ * alloc_grid - alloc_grid
+ * @width: width
+ * @height: height
+ * Return: double pointer.
+ */
 int **alloc_grid(int width, int height)
 {
 	int **p;

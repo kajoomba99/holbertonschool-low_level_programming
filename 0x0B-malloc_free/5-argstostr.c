@@ -1,36 +1,46 @@
+#include "holberton.h"
 #include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 /**
- * argstostr - argstostr
- * @ac: ac
- * @av: av
- * Return: c
- */
+  * _strlen - returns string length
+  * @s: takes in string
+  * Return: string length
+  */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
+/**
+  * argstostr - concats all arguments of program
+  * @ac: takes in arguments
+  * @av: array of arguments
+  * Return: pointer to new string
+  */
 char *argstostr(int ac, char **av)
 {
-	int acum = 0, i, l, p = 0, j;
-	char *c;
+	char *nstr;
 
-	for (i = 0; i < ac; i++)
-	{
-		j = 0;
-		while (av[i][j] != '\0')
-			acum += 1, j++;
-	}
-	c = malloc((acum + 1) * sizeof(char));
-	if (c == NULL)
+	int i, j, k, all_args = 0;
+
+	if (ac == 0 || av == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
+		all_args += _strlen(av[i]) + 1;
+	nstr = malloc(sizeof(char) * all_args + 1);
+	if (nstr == NULL)
+		return (NULL);
+	for (i = 0, k = 0; i < ac; i++)
 	{
-		for (l = 0; av[i][l] != '\0'; l++)
+		for (j = 0; av[i][j] != '\0'; j++, k++)
 		{
-			c[p] = av[i][l];
-			p++;
+			nstr[k] = av[i][j];
 		}
-		c[p] = '\n';
-		p++;
+		nstr[k] = '\n';
+		k++;
 	}
-	c[p] = '\0';
-	return (c);
+	nstr[k] = '\0';
+	return (nstr);
 }

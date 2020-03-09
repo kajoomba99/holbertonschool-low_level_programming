@@ -1,5 +1,11 @@
 #ifndef STEVEN_H
 #define STEVEN_H
+/**
+ * struct dog - struct dog
+ * @name: name
+ * @age: age
+ * @owner: owner
+ */
 struct dog
 {
 	char *name;

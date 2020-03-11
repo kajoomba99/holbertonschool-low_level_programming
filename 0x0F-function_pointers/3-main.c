@@ -6,9 +6,8 @@
  * Return: 0
  */
 int main(int argc __attribute__((unused)),
-char *argv[] __attribute__((unused)))
+		char *argv[] __attribute__((unused)))
 {
-
 	int (*my_function_pointer)(int, int);
 	int res;
 
@@ -20,7 +19,7 @@ char *argv[] __attribute__((unused)))
 
 	if ((*argv[2] == '/' || *argv[2] == '%') && (atoi(argv[3]) == 0))
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(100);
 	}
 

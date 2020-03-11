@@ -12,23 +12,21 @@ char *argv[] __attribute__((unused)))
 	int (*my_function_pointer)(int, int);
 	int res;
 
-	my_function_pointer = get_op_func(argv[2]);
-
-	res = my_function_pointer(atoi(argv[1]), atoi(argv[3]));
-
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
 
-	if ((*argv[2] == '/' || *argv[2] == '%') &&
-	(atoi(argv[1]) == 0 || atoi(argv[3]) == 0))
+	if ((*argv[2] == '/' || *argv[2] == '%') && (atoi(argv[3]) == 0))
 	{
 		printf("Error");
 		exit(100);
 	}
 
+	my_function_pointer = get_op_func(argv[2]);
+
+	res = my_function_pointer(atoi(argv[1]), atoi(argv[3]));
 
 	printf("%i\n", res);
 	return (0);

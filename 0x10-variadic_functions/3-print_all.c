@@ -18,7 +18,7 @@ void print_all(const char * const format, ...)
 
 	va_start(pa, format);
 
-	while (format[i] != '\0')
+	while (format[i] != '\0' && format != NULL)
 	{
 		j = 0;
 		while (j < 4)
@@ -35,9 +35,8 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 
-	printf("\n");
-
 	va_end(pa);
+	printf("\n");
 }
 /**
  * fun_c -fun_c
@@ -74,5 +73,5 @@ void fun_f(va_list list)
  */
 void fun_i(va_list list)
 {
-	printf("%i", va_arg(list, int));
+	printf("%d", va_arg(list, int));
 }

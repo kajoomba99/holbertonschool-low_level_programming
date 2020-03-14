@@ -11,7 +11,7 @@
 typedef struct options
 {
 	char op;
-	void (*print_type)(va_list);
+	void (*print_type)();
 } opts;
 
 int sum_them_all(const unsigned int n, ...);

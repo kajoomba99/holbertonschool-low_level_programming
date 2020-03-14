@@ -10,10 +10,11 @@ void print_all(const char * const format, ...)
 	char *c = "";
 
 	opts myop[] = {
-		{'c', fun_c},
-		{'i', fun_i},
-		{'f', fun_f},
-		{'s', fun_s}
+		{"c", fun_c},
+		{"i", fun_i},
+		{"f", fun_f},
+		{"s", fun_s},
+		{NULL, NULL}
 	};
 
 	va_start(pa, format);
@@ -23,7 +24,7 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (j < 4)
 		{
-			if (format[i] == myop[j].op)
+			if (format[i] == *myop[j].op)
 			{
 				printf("%s", c);
 				myop[j].print_type(pa);

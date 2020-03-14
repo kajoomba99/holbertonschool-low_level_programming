@@ -10,7 +10,7 @@
  */
 typedef struct options
 {
-	char op;
+	char *op;
 	void (*print_type)();
 } opts;
 

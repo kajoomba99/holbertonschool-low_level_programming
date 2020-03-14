@@ -2,11 +2,16 @@
 #define HOLBERTON_H
 #include <stdarg.h>
 #include <stdio.h>
-
+/**
+ * struct options - options
+ * @op: op
+ * @print_type: print_type
+ * Description: Longer description
+ */
 typedef struct options
 {
-        char op;
-        void (*print_type)(va_list);
+	char op;
+	void (*print_type)(va_list);
 } opts;
 
 int sum_them_all(const unsigned int n, ...);

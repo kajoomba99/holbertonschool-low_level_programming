@@ -27,10 +27,10 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", c);
 				myop[j].print_type(pa);
+				c = ", ";
 			}
 			j++;
 		}
-		c = ", ";
 		i++;
 	}
 

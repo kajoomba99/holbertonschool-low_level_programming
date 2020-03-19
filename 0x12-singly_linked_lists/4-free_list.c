@@ -12,6 +12,7 @@ void free_list(list_t *head)
 	while (p != NULL)
 	{
 		store = p->next;
+		free(p->str);
 		free(p);
 		p = store;
 	}

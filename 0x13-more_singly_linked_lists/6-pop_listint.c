@@ -6,14 +6,20 @@
  */
 int pop_listint(listint_t **head)
 {
-	listint_t *del = *head;
+	listint_t *del;
 
-	int deleted = (*head)->n;
+	int n;
 
 	if (*head == NULL || head == NULL)
 		return (0);
 
-	*head = del->next;
-	free(del);
-	return (deleted);
+	n = (*head)->n;
+
+	del = (*head)->next;
+
+	free(*head);
+
+	*head = del;
+
+	return (n);
 }

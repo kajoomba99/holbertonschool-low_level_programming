@@ -13,7 +13,7 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	for (c = 31; c >= 0; c--)
+	for (c = 63; c >= 0; c--)
 	{
 		result = n >> c;
 

@@ -1,3 +1,5 @@
+#include "holberton.h"
+
 /**
  * binary_to_uint - binary_to_uint
  * @b: b
@@ -21,7 +23,7 @@ unsigned int binary_to_uint(const char *b)
 		if (b[index] == '1')
 			acum += bin;
 
-		if (b[index] == '1' || b[index] == '0')
+		if (b[index] != '1' && b[index] != '0')
 			return (0);
 
 		bin /= 2;

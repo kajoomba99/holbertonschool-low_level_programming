@@ -7,12 +7,20 @@
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	int ref;
+	int ref, refn;
 
 	if (index > 63)
 		return (-1);
 
+	refn = *n;
+
 	ref = 1 << index;
-	*n -= ref;
+	refn -= ref;
+
+	if (refn < 0)
+		*n = 0;
+	else
+		*n = refn;
+
 	return (1);
 }

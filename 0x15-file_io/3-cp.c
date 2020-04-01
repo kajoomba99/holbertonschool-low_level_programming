@@ -19,16 +19,17 @@ int main(int argv, char **argc)
 	}
 
 	fd1 = open(file_from, O_RDONLY);
-	r = read(fd1, buffer, 1024);
+	fd2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	do {
+		r = read(fd1, buffer, 1024);
+		w = write(fd2, buffer, r);
+	} while (r == 1024);
 
 	if (fd1 == -1 || r == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
-
-	fd2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	w = write(fd2, buffer, r);
 
 	if (fd2 == -1 || w == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to), exit(99);

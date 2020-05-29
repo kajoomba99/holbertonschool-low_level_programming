@@ -7,9 +7,14 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	unsigned int slot = key_index((unsigned char *)key, ht->size);
+	hash_node_t *entry = NULL;
+	unsigned int index = 0;
 
-	hash_node_t *entry = ht->array[slot];
+	if (ht == NULL || key == NULL)
+		return (NULL);
+
+	index = key_index((unsigned char *)key, ht->size);
+	entry = ht->array[index];
 
 	if (entry == NULL)
 	{

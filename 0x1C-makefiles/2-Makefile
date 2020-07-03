@@ -6,5 +6,8 @@ NAME = holberton
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-objectfiles: $(SRC)
-	$(CC) -c $(SRC)
+main.o: main.c m.h
+	$(CC) -c -o main.o main.c
+
+holberton.o: holberton.c m.h
+	$(CC) -c -o holberton.o holberton.c

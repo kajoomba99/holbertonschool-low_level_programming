@@ -1,21 +1,24 @@
 #!/usr/bin/python3
-""" Define an island perimeter """
+"""
+Islanda Perimeter
+"""
 
 
 def island_perimeter(grid):
-    """ Return the perimeter """
-
-    height = len(grid)
-    width = len(grid[0])
-    totalsquare = 0
-    edges = 0
-
-    for row in range(height):
-        for col in range(width):
-            if grid[row][col] == 1:
-                totalsquare += 4
-                if row > 0 and grid[row - 1][col] == 1:
-                    edges += 2
-                if col > 0 and grid[row][col - 1] == 1:
-                    edges += 2
-    return (totalsquare - edges)
+    """
+    returns the perimeter of the island described in grid
+    """
+    perimeter = 0
+    
+    for f in range(len(grid)):
+        for c in range(len(grid[f])):
+            if grid[f][c] == 1:
+                if f - 1 >= 0 and grid[f - 1][c] == 0:
+                    perimeter += 1
+                if c + 1 < len(grid[f]) and grid[f][c + 1] == 0:
+                    perimeter += 1
+                if f + 1 < len(grid) and grid[f + 1][c] == 0:
+                    perimeter += 1
+                if c - 1 >= 0 and grid[f][c - 1] == 0:
+                    perimeter += 1
+    return perimeter

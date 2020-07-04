@@ -12,6 +12,9 @@ def island_perimeter(grid):
     columnas = len(grid[0])
     perimeter = 0
 
+    if type(grid) == list or grid is None:
+        return 0
+
     for f in range(filas):
         for c in range(columnas):
             if grid[f][c] == 1:
